@@ -38,6 +38,24 @@ def f3():
     pass
 ```
 
+It is safe to reuse the same once created decorator instance on a different
+functions. 
+
+```python
+my_decorator_500 = my_decorator(arg2=500)
+
+@my_decorator_500
+def f1():
+    print('f1')
+
+@my_decorator_500
+def f2():
+    print('f2')
+
+f1()
+f2()
+```
+
 
 ## Authors
 
