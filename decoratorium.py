@@ -1,4 +1,7 @@
 from collections import Callable
+from functools import partial
+
+from decorator import decorate
 
 
 __all__ = ['decoratorium']
@@ -18,20 +21,20 @@ class Decoratorium:
         return self
 
     def __call__(self, func):
-        """ An actual decorator.
+        """ Builds decorated function.
         """
-        self.func = func
-        return self.wrapper
+        return decorate(func, self.wrapper)
 
     def __init__(self, *args, **kwargs):
         """ Allows to catch decorator arguments via `@decorator(args)` syntax.
         """
         pass
 
-    def wrapper(self, *args, **kwargs):
+    def wrapper(self, func, *args, **kwargs):
         """ A wrapper interface to be implemented.
 
-        Has access to the decorated function via `self.func`.
+        Uses decorate module approach to have `func` being passed explicitly.
+        This allows to reuse the same decorator class on several functions.
         """
         return NotImplemented
 

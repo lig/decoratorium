@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='decoratorium',
-    version='1.0',
+    version='2.0',
     description='Decorator class implementation.',
     url='https://github.com/lig/decoratorium',
     author='Serge Matveenko',
@@ -19,6 +19,7 @@ setup(
     ],
     keywords='python decorator class klass',
     py_modules=['decoratorium'],
+    install_requires=['decorator'],
     extras_require={
         'test': ['pytest'],
     },
