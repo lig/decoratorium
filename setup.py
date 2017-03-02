@@ -18,7 +18,7 @@ setup(
         'Programming Language :: Python :: 3 :: Only'
     ],
     keywords='python decorator class klass',
-    packages=['decoratorium'],
+    py_modules=['decoratorium'],
     extras_require={
         'test': ['pytest'],
     },
