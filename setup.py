@@ -19,6 +19,7 @@ setup(
     ],
     keywords='python decorator class klass',
     py_modules=['decoratorium'],
+    install_requires=['decorator'],
     extras_require={
         'test': ['pytest'],
     },
