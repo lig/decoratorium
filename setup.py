@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='decoratorium',
-    version='1.0',
+    version='2.0',
     description='Decorator class implementation.',
     url='https://github.com/lig/decoratorium',
     author='Serge Matveenko',
