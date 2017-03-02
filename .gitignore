@@ -1,0 +1,9 @@
+.*
+*~
+!.gitignore
+
+# python
+*.pyc
+/decoratorium.egg-info
+/build
+/dist
