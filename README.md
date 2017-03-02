@@ -24,6 +24,18 @@ class my_decorator(decoratorium):
     def wrapper(self, *args, **kwargs):
         result = self.func(*args, **kwargs)
         return self.arg1 * self.arg2 / result
+
+@my_decorator
+def f1():
+    pass
+
+@my_decorator()
+def f2():
+    pass
+
+@my_decorator(arg2=500)
+def f3():
+    pass
 ```
 
 
