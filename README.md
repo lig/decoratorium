@@ -21,8 +21,8 @@ class my_decorator(decoratorium):
         self.arg1 = arg1
         self.arg2 = arg2
           
-    def wrapper(self, *args, **kwargs):
-        result = self.func(*args, **kwargs)
+    def wrapper(self, func, *args, **kwargs):
+        result = func(*args, **kwargs)
         return self.arg1 * self.arg2 / result
 
 @my_decorator
